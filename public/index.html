@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Human Robot Interaction Experiment</title>
+        <style>
+            .main{
+                display: flex;
+                margin: 0 auto;
+                position: relative;
+                width: 750px;
+            }
+            .sideinfo {
+                margin-top: 20px;
+                margin-left: 10px;
+                border: 3px solid black;
+                width: 200px;
+                height: 525px;
+                padding-left: 10px;
+            }
+            .map {
+                margin-top: 20px;
+                border: 1px solid black;
+                width: 528px;
+                height: 528px;
+                position: relative;
+            }
+            .ul-side {
+                padding: 0;
+                margin: 0;
+                padding-left: 20px;
+                padding-right: 20px;
+            }
+        </style>
+    </head>
+    <body>
+
+        <div class = "main">
+            <div class="map">
+                <canvas class = "canvas" width="528" height="528"></canvas>
+            </div>
+            <div class="sideinfo">
+                <p id="mapcount"><b>Map</b>: 1/1</p>
+                <p id="total-score"><b>Total Score</b>: 0</p>
+                <p id="current-score"><b>Current Score</b>: 0</p>
+                <p id="objective"><b>Objective</b>: Collect x objects</p>
+                <p id="collected"><b>Collect</b>: 0</p>
+                <p id="humanstat"><b><font color="blue">You</font></b>: <b>Str</b> = x, <b>Dex</b> = y</p>
+                <p id="robotstat"><b><font color="red">Robot</font></b>: <b>Str</b> = x, <b>Dex</b> = y</p>
+                <p><b>Object's Attribute</b>:</p>
+                <ul class="ul-side">
+                    <li><b>Top left</b> is <b>Str</b> requirement.</li>
+                    <li><b>Bottom right</b> is <b>Dex</b> requirement.</li>
+                </ul>
+                <p><b>Object's Rewards</b>: </p>
+                <ul id = "rewards" class="ul-side">
+                </ul>
+            </div>
+        </div>
+
+        <script src ="scripts/render.js"></script>
+        <script src ="scripts/object.js"></script>
+        <script src ="scripts/player.js"></script>
+        <script src ="scripts/location.js"></script>
+        <script src ="scripts/ai_robot.js"></script>
+        <script src ="scripts/task.js"></script>
+        <script src ="scripts/subtask.js"></script>
+        <script src ="scripts/game_declaration.js"></script>
+        <script type="module" src="scripts/firebase-storage.js"></script>
+        <script type="module" src ="scripts/game_logic.js"></script>
+        
+        
+    </body>
+</html>
